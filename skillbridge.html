@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillBridge - Career Builder</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f9;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🚀 SkillBridge</h1>
+<p>Discover Your Future Career Path</p>
+
+<div class="card">
+    <h3>Choose Your Interest</h3>
+    <button onclick="showCareer('Technology')">Technology</button>
+    <button onclick="showCareer('Business')">Business</button>
+    <button onclick="showCareer('Arts')">Arts</button>
+</div>
+
+<div id="result"></div>
+
+<script>
+function showCareer(field) {
+    let message = "";
+
+    if(field === "Technology") {
+        message = "You can become a Software Developer, AI Engineer, or App Creator!";
+    }
+    else if(field === "Business") {
+        message = "You can become an Entrepreneur, Manager, or Startup Founder!";
+    }
+    else if(field === "Arts") {
+        message = "You can become a Designer, Animator, or Content Creator!";
+    }
+
+    document.getElementById("result").innerHTML = message;
+}
+</script>
+
+</body>
+</html>
